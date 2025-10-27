@@ -179,3 +179,17 @@ Environment variables in the script:
 - `PYTHONPATH`: Sets the Python path to include the GUI-ReWalk repository
 - `API_KEY`: API key for accessing the language model service
 - `API_BASE_URL`: Base URL for the language model API
+
+## 📚 CITE
+
+```
+@misc{lin2025guirewalkmassivedatageneration,
+       title={GUI-ReWalk: Massive Data Generation for GUI Agent via Stochastic Exploration and Intent-Aware Reasoning},
+       author={Musen Lin and Minghao Liu and Taoran Lu and Lichen Yuan and Yiwei Liu and Haonan Xu and Yu Miao and Yuhao Chao and Zhaojian Li},
+       year={2025},
+       eprint={2509.15738},
+       archivePrefix={arXiv},
+       primaryClass={cs.LG},
+       url={https://arxiv.org/abs/2509.15738},
+}
+```
